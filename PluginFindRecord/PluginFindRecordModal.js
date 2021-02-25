@@ -329,7 +329,8 @@ class PluginFindRecordModal extends React.Component {
                               : (
                                 <Filters
                                   activeFilters={activeFilters}
-                                  config={filterConfig}
+                                  // config={filterConfig}
+                                  config={[]}
                                   onChangeHandlers={getFilterHandlers()}
                                 />
                               )
