@@ -18,7 +18,8 @@ export default rec => {
 
   rec.identifiers?.forEach(i => { // eslint-disable-line no-unused-expressions
     const idType = FOLIOIDENTIFIERS[i.identifierTypeId];
-    if (idType) res[idType] = i.value;
+    if (idType === 'isbn') res[idType] = i.value.replace(/[^\d-X]/g, '');
+    else if (idType) res[idType] = i.value;
   });
   return res;
 };
