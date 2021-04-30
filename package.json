@@ -28,7 +28,7 @@
     "prop-types": "^15.6.0"
   },
   "peerDependencies": {
-    "@folio/stripes": "^5.0.0",
+    "@folio/stripes": ">5.0.0",
     "react": "*",
     "react-intl": "^5.7.0"
   }
