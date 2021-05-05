@@ -1,6 +1,6 @@
 {
   "name": "@reshare/plugin-rs-siquery-folio",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Plugin to find an instance from an SI via the FOLIO inventory API",
   "license": "Apache-2.0",
   "stripes": {
@@ -15,8 +15,8 @@
   },
   "devDependencies": {
     "@folio/eslint-config-stripes": "^5.0.0",
-    "@folio/stripes": "^5.0.0",
-    "@folio/stripes-cli": "^1.18.0",
+    "@folio/stripes": "^6.1.0",
+    "@folio/stripes-cli": "~2.1.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.2.1",
     "react": "^16.5.0",
@@ -28,7 +28,7 @@
     "prop-types": "^15.6.0"
   },
   "peerDependencies": {
-    "@folio/stripes": "^5.0.0",
+    "@folio/stripes": "^5.0.0 || ^6.1.0",
     "react": "*",
     "react-intl": "^5.7.0"
   }
