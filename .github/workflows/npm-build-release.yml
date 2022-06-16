@@ -70,3 +70,8 @@ jobs:
       - name: Run yarn lint
         run: yarn lint
         continue-on-error: true
+
+      - name: Publish NPM to FOLIO NPM registry
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.RESHARE_NPM_TOKEN }}
