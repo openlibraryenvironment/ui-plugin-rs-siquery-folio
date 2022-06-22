@@ -49,15 +49,14 @@ jobs:
         run: yarn config set @folio:registry $FOLIO_NPM_REGISTRY
 
       - name: Set yarn config for RESHARE
-        run: yarn config set @folio:registry $RESHARE_NPM_REGISTRY
-
-      - name: Set yarn auth token for RESHARE
-        run: yarn config set @folio:registry $RESHARE_NPM_REGISTRY
+        run: yarn config set @folio:registry $FOLIO_NPM_REGISTRY
 
       - name: Set _auth in .npmrc
         run: |
           npm config set @reshare:registry $RESHARE_NPM_REGISTRY
-          npm config set _auth $NODE_AUTH_TOKEN
+          npm config set -- //nexus.libsdev.k-int.com/repository/libsdev-npm-snapshots-hosted/:_authToken=$NODE_AUTH_TOKEN
+          echo run whoami for $RESHARE_NPM_REGISTRY
+          npm --registry $RESHARE_NPM_REGISTRY whoami
         env:
           NODE_AUTH_TOKEN: ${{ secrets.RESHARE_NPM_RELEASE_TOKEN }}
 
